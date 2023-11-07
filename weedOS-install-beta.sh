@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.5 Beta' 
+echo 'Weed OS II 1.6 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -29,7 +29,7 @@ rm Catppuccin-*.zip
 cp -r Catppuccin-* ~/.themes
 rm -rf Catppuccin-* 
 # GTK 4 Fix 
-#mkdir -p "${HOME}/.config/gtk-4.0"
+mkdir -p "${HOME}/.config/gtk-4.0"
 #ln -sf "${THEME_DIR}/gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
 #ln -sf "${THEME_DIR}/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
 #ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
@@ -39,6 +39,7 @@ rm -rf Catppuccin-*
 # Better fix supposedly V V V 
 #cd ~/.config/xfce4/xfconf/xfce-perchannel-xml
 #THEME_VAR=`cat xfwm4.xml | grep Catppuccin | cut -cX-Y `
+#export THEME_VAR
 #ln -sf "${THEME_VAR}/gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
 #ln -sf "${THEME_VAR}/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
 #ln -sf "${THEME_VAR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
