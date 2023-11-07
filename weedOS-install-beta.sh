@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.2 Beta' 
+echo 'Weed OS II 1.3 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -22,7 +22,8 @@ cp -r numix-icon-theme-circle/Numix-* ~/.icons
 rm -rf numix-icon-theme-circle/
 wget https://github.com/catppuccin/gtk/releases/download/v0.7.0/Catppuccin-Frappe-Standard-Green-Dark.zip
 wget https://github.com/catppuccin/gtk/releases/download/v0.7.0/Catppuccin-Latte-Standard-Green-Light.zip
-unzip Catppuccin-*.zip
+unzip Catppuccin-Frappe-Standard-Green-Dark.zip
+unzip Catppuccin-Latte-Standard-Green-Light.zip
 rm Catppuccin-*.zip
 cp -r Catppuccin-* ~/.themes
 rm -rf Catppuccin-* 
