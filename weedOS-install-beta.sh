@@ -11,8 +11,8 @@ sudo apt update
 sudo apt install xserver-xorg xinit htop mesa-utils firmware-realtek firmware-iwlwifi git unzip wget plymouth plymouth-themes cpufrequtils lightdm xserver-xorg-input-synaptics -y
 mkdir cache 
 mkdir -p "${HOME}/.config/gtk-4.0"
-mkdir .icons
-mkdir .themes
+mkdir ~/.icons
+mkdir ~/.themes
 mkdir Desktop
 mkdir Downloads
 mkdir Documents
