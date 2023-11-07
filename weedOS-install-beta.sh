@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.7 Beta' 
+echo 'Weed OS II 1.9 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -24,6 +24,7 @@ mkdir ~/.config/qt5ct/colors
 
 sudo apt install xfce4 xfce4-whiskermenu-plugin picom plank qt5-gtk2-platformtheme network-manager network-manager-gnome xfce4-power-manager-plugins xfce4-whiskermenu-plugin -y
 sudo apt install numix-icon-theme-circle numix-icon-theme fonts-roboto menulibre mugshot lightdm-gtk-greeter-settings xfce4-screenshooter mousepad qt5ct -y
+sudo apt install firefox-esr gnome-software flatpak gnome-software-plugin-flatpak vlc -y
 WEEDOSSCRIPT=`pwd`
 cd cache
 git clone https://github.com/numixproject/numix-icon-theme-circle
@@ -45,15 +46,19 @@ cd /usr/share/themes/
 sudo mv Catppuccin-Frappe-Standard-Green-Dark Catppuccin-Green-Dark
 sudo mv Catppuccin-Latte-Standard-Green-Light Catppuccin-Green-Lite
 cd ${WEEDOSSCRIPT}/ 
-#cd cache 
-#sudo apt install cmake extra-cmake-modules libkdecorations2-dev libkf5plasma-dev libqt5x11extras5-dev qtdeclarative5-dev libkf5windowsystem-dev libkf5coreaddons-dev libkf5iconthemes-dev gettext qt3d5-dev build-essential libkf5guiaddons-dev libkf5configwidgets-dev -y
-#git clone --single-branch --depth=1 https://github.com/Luwx/Lightly.git
-#cd Lightly && mkdir build && cd build
-#cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib -DBUILD_TESTING=OFF ..
-#make
-#sudo make install
-#cd ..
-#cd ..
-#git clone https://github.com/catppuccin/qt5ct
-#sudo cp /qt5ct/Catppuccin-Frappe.conf ~/.config/qt5ct/colors/ 
-#sudo cp /qt5ct/Catppuccin-Latte.conf ~/.config/qt5ct/colors/ 
+
+### Stage 3 
+
+flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+#wget < USER CONF >
+cd cache
+sudo wget https://cdn.discordapp.com/attachments/926440184411729940/1074051222425845871/Wallpapers-11-02-23-PART1.zip
+sudo wget https://cdn.discordapp.com/attachments/926440184411729940/1074051226842439710/Wallpapers-11-02-2023-PART2.zip
+sudo wget https://cdn.discordapp.com/attachments/926440184411729940/1074051196890906624/Wallpapers-11-02-2023-PART3.zip
+sudo unzip Wallpapers-*-PART1.zip
+sudo unzip Wallpapers-*-PART2.zip
+sudo unzip Wallpapers-*-PART3.zip
+#sudo rm Wallpapers-*.zip
+#sudo cp *.svg /usr/share/desktop-base/homeworld-theme/wallpaper/contents/images/
+cd ..
+
