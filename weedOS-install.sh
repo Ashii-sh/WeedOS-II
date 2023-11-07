@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.0 Main' 
+echo 'Weed OS II 1.1 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -26,3 +26,9 @@ unzip Catppuccin-*.zip
 rm Catppuccin-*.zip
 cp -r Catppuccin-* ~/.themes
 rm -rf Catppuccin-* 
+# GTK 4 Fix 
+mkdir -p "${HOME}/.config/gtk-4.0"
+ln -sf "${THEME_DIR}/gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
+ln -sf "${THEME_DIR}/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
+ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
+
