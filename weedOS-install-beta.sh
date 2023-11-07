@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.4 Beta' 
+echo 'Weed OS II 1.5 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -29,8 +29,18 @@ rm Catppuccin-*.zip
 cp -r Catppuccin-* ~/.themes
 rm -rf Catppuccin-* 
 # GTK 4 Fix 
-mkdir -p "${HOME}/.config/gtk-4.0"
-ln -sf "${THEME_DIR}/gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
-ln -sf "${THEME_DIR}/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
-ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
+#mkdir -p "${HOME}/.config/gtk-4.0"
+#ln -sf "${THEME_DIR}/gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
+#ln -sf "${THEME_DIR}/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
+#ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
 
+# GTK 4 Fix didnt work, assumingly due to the ${THEME_DIR} variable not being set to anything.
+
+# Better fix supposedly V V V 
+#cd ~/.config/xfce4/xfconf/xfce-perchannel-xml
+#THEME_VAR=`cat xfwm4.xml | grep Catppuccin | cut -cX-Y `
+#ln -sf "${THEME_VAR}/gtk-4.0/assets" "${HOME}/.config/gtk-4.0/assets"
+#ln -sf "${THEME_VAR}/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
+#ln -sf "${THEME_VAR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
+#Replace X and Y for the actual values of the location of Catppuccin-Green-Lite/Dark
+#These commans may need to become a startup script, will come back to later.
