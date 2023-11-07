@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.1 Beta' 
+echo 'Weed OS II 1.2 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -14,7 +14,7 @@ mkdir cache
 ### Stage 2 
 
 sudo apt install xfce4 xfce4-whiskermenu-plugin picom plank qt5-gtk2-platformtheme network-manager network-manager-gnome xfce4-power-manager-plugins xfce4-whiskermenu-plugin -y
-sudo apt install numix-icon-theme-circle numix-icon-theme fonts-roboto menulibre mugshot lightdm-gtk-greeter-settings xfce4-screenshooter mousepad 
+sudo apt install numix-icon-theme-circle numix-icon-theme fonts-roboto menulibre mugshot lightdm-gtk-greeter-settings xfce4-screenshooter mousepad -y
 cd cache
 git clone https://github.com/numixproject/numix-icon-theme-circle
 sudo cp -r numix-icon-theme-circle/Numix-* /usr/share/icons
