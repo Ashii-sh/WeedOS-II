@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.9.1 Beta' 
+echo 'Weed OS II 1.9.2 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -52,10 +52,14 @@ cd ${WEEDOSSCRIPT}/
 flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
 #wget < USER CONF >
 cd cache
+mkdir theme
+cd theme
 wget https://cdn.discordapp.com/attachments/926440184411729940/1171629350337122354/Wallpapers-PT-1.tar.gz
-wget https://cdn.discordapp.com/attachments/926440184411729940/1171628802548441138/Wallpapers-PT-2.tar.gz
-wget https://cdn.discordapp.com/attachments/926440184411729940/1171628861369356498/Wallpapers-PT-3.tar.gz
+#wget https://cdn.discordapp.com/attachments/926440184411729940/1171628802548441138/Wallpapers-PT-2.tar.gz
+#wget https://cdn.discordapp.com/attachments/926440184411729940/1171628861369356498/Wallpapers-PT-3.tar.gz
 tar -xvzf Wallpapers-PT-1.tar.gz
+rm Wallpapers-PT-1.tar.gz
+
 #sudo unzip Wallpapers-*-PART2.zip
 #sudo unzip Wallpapers-*-PART3.zip
 #sudo rm Wallpapers-*.zip
