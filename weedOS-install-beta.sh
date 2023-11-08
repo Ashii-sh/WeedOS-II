@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.9.6 Beta' 
+echo 'Weed OS II 1.9.7 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -8,7 +8,7 @@ clear
 
 sudo dpkg --add-architecture i386
 sudo apt update
-sudo apt install xserver-xorg xinit htop mesa-utils firmware-realtek firmware-iwlwifi git unzip wget plymouth plymouth-themes cpufrequtils lightdm xserver-xorg-input-synaptics -y
+sudo apt install xserver-xorg xinit htop mesa-utils firmware-realtek firmware-iwlwifi git unzip wget plymouth plymouth-themes cpufrequtils lightdm xserver-xorg-input-all -y
 
 mkdir cache 
 mkdir -p "${HOME}/.config/gtk-4.0"
@@ -89,6 +89,13 @@ wget https://cdn.discordapp.com/attachments/926440184411729940/11716655391653315
 unzip lightdm.zip
 sudo cp -r lightdm.conf /etc/lightdm/
 sudo cp -r lightdm-gtk-greeter.conf /etc/lightdm/
+cd ..
+
+cd cache
+wget https://cdn.discordapp.com/attachments/926440184411729940/1171673903853211648/bgrt-mi.zip
+unzip bgrt-mi.zip 
+sudo cp -r bgrt-mi/ /usr/share/plymouth/themes/
+sudo plymouth-set-default-theme bgrt-mi -R 
 cd ..
 
 #wget <userdata>
