@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.9.4 Beta' 
+echo 'Weed OS II 1.9.5 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -77,6 +77,13 @@ sudo apt install xfce4-appmenu-plugin vala-panel-appmenu appmenu* -y
 xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
 sudo cp Global-Menu-Enabler/52appmenu-gtk-module_add-to-gtk-modules /etc/X11/Xsession.d
+cd ${WEEDOSSCRIPT}/
+
+cd cache 
+wget https://cdn.discordapp.com/attachments/926440184411729940/1147793538239696956/weed.png
+cp weed.png ~/.config/weedOS 
+cd ${WEEDOSSCRIPT}/
+
 
 #wget <USER DATA>
 
