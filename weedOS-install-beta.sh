@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.9.5 Beta' 
+echo 'Weed OS II 1.9.6 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -84,6 +84,16 @@ wget https://cdn.discordapp.com/attachments/926440184411729940/11477935382396969
 cp weed.png ~/.config/weedOS 
 cd ${WEEDOSSCRIPT}/
 
+cd cache 
+wget https://cdn.discordapp.com/attachments/926440184411729940/1171665539165331546/lightdm.zip
+unzip lightdm.zip
+sudo cp -r lightdm.conf /etc/lightdm/
+sudo cp -r lightdm-gtk-greeter.conf /etc/lightdm/
+cd ..
 
-#wget <USER DATA>
+#wget <userdata>
 
+### Cleanup
+
+rm -rf cache/
+clear 
