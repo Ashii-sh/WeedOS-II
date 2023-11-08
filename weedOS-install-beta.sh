@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.9 Beta' 
+echo 'Weed OS II 1.9.1 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -52,12 +52,12 @@ cd ${WEEDOSSCRIPT}/
 flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
 #wget < USER CONF >
 cd cache
-sudo wget https://cdn.discordapp.com/attachments/926440184411729940/1074051222425845871/Wallpapers-11-02-23-PART1.zip
-sudo wget https://cdn.discordapp.com/attachments/926440184411729940/1074051226842439710/Wallpapers-11-02-2023-PART2.zip
-sudo wget https://cdn.discordapp.com/attachments/926440184411729940/1074051196890906624/Wallpapers-11-02-2023-PART3.zip
-sudo unzip Wallpapers-*-PART1.zip
-sudo unzip Wallpapers-*-PART2.zip
-sudo unzip Wallpapers-*-PART3.zip
+wget https://cdn.discordapp.com/attachments/926440184411729940/1171629350337122354/Wallpapers-PT-1.tar.gz
+wget https://cdn.discordapp.com/attachments/926440184411729940/1171628802548441138/Wallpapers-PT-2.tar.gz
+wget https://cdn.discordapp.com/attachments/926440184411729940/1171628861369356498/Wallpapers-PT-3.tar.gz
+tar -xvzf Wallpapers-PT-1.tar.gz
+#sudo unzip Wallpapers-*-PART2.zip
+#sudo unzip Wallpapers-*-PART3.zip
 #sudo rm Wallpapers-*.zip
 #sudo cp *.svg /usr/share/desktop-base/homeworld-theme/wallpaper/contents/images/
 cd ..
