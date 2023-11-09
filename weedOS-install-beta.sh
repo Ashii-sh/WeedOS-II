@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.9.7 Beta' 
+echo 'Weed OS II 1.9.8 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -24,7 +24,7 @@ mkdir ~/.config/qt5ct/colors
 ### Stage 2 
 
 sudo apt install xfce4 xfce4-whiskermenu-plugin picom plank qt5-gtk2-platformtheme network-manager network-manager-gnome xfce4-power-manager-plugins xfce4-whiskermenu-plugin -y
-sudo apt install numix-icon-theme-circle numix-icon-theme fonts-roboto menulibre mugshot lightdm-gtk-greeter-settings xfce4-screenshooter mousepad qt5ct -y
+sudo apt install numix-icon-theme-circle numix-icon-theme fonts-roboto menulibre mugshot lightdm-gtk-greeter-settings xfce4-terminal xfce4-screenshooter mousepad qt5ct -y
 sudo apt install firefox-esr gnome-software flatpak gnome-software-plugin-flatpak vlc -y
 WEEDOSSCRIPT=`pwd`
 
@@ -64,10 +64,12 @@ cd contents
 cd images 
 wget https://cdn.discordapp.com/attachments/926440184411729940/1171628802548441138/Wallpapers-PT-2.tar.gz
 wget https://cdn.discordapp.com/attachments/926440184411729940/1171628861369356498/Wallpapers-PT-3.tar.gz
-tar -xvzf Wallpapers-PT-*.tar.gz
+tar -xvzf Wallpapers-PT-2.tar.gz
+tar -xvzf Wallpapers-PT-3.tar.gz
 rm Wallpapers-PT-*.tar.gz
 cd ${WEEDOSSCRIPT}/
 cd cache
+sudo rm -rf /usr/share/desktop-base/emerald-theme/wallpaper/*
 sudo cp -r theme/* /usr/share/desktop-base/emerald-theme/wallpaper/
 cd ${WEEDOSSCRIPT}/
 
@@ -89,14 +91,14 @@ wget https://cdn.discordapp.com/attachments/926440184411729940/11716655391653315
 unzip lightdm.zip
 sudo cp -r lightdm.conf /etc/lightdm/
 sudo cp -r lightdm-gtk-greeter.conf /etc/lightdm/
-cd ..
+cd ${WEEDOSSCRIPT}/
 
 cd cache
 wget https://cdn.discordapp.com/attachments/926440184411729940/1171673903853211648/bgrt-mi.zip
 unzip bgrt-mi.zip 
 sudo cp -r bgrt-mi/ /usr/share/plymouth/themes/
 sudo plymouth-set-default-theme bgrt-mi -R 
-cd ..
+cd ${WEEDOSSCRIPT}/
 
 #wget <userdata>
 
@@ -104,3 +106,4 @@ cd ..
 
 rm -rf cache/
 clear 
+sudo apt remove xterm -y
