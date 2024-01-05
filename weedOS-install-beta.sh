@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Weed OS II 1.9.8 Beta' 
+echo 'Weed OS II 1.9.9 Beta' 
 echo 'Made with < 3 in Florida'
 sleep 3
 clear
@@ -99,8 +99,13 @@ unzip bgrt-mi.zip
 sudo cp -r bgrt-mi/ /usr/share/plymouth/themes/
 sudo plymouth-set-default-theme bgrt-mi -R 
 cd ${WEEDOSSCRIPT}/
-
-#wget <userdata>
+cd cache
+mkdir home
+cd homefolder
+wget https://cdn.discordapp.com/attachments/926440184411729940/1188717524209119232/UserConfigFolder-12-24-2023.zip
+cd.. 
+cp -r homefolder/* ${HOME}/
+cd..
 
 ### Cleanup
 
