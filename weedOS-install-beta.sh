@@ -23,7 +23,7 @@ mkdir ~/.config/qt5ct/colors
 
 ### Stage 2 
 
-sudo apt install xfce4 xfce4-whiskermenu-plugin picom plank qt5-gtk2-platformtheme network-manager network-manager-gnome xfce4-power-manager-plugins xfce4-whiskermenu-plugin -y
+sudo apt install xfce4 xfce4-whiskermenu-plugin picom plank qt5-gtk2-platformtheme network-manager-gnome xfce4-power-manager-plugins xfce4-whiskermenu-plugin -y
 sudo apt install numix-icon-theme-circle numix-icon-theme fonts-roboto menulibre mugshot lightdm-gtk-greeter-settings xfce4-terminal xfce4-screenshooter mousepad qt5ct -y
 sudo apt install firefox-esr gnome-software flatpak gnome-software-plugin-flatpak vlc -y
 WEEDOSSCRIPT=`pwd`
